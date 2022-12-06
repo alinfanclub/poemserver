@@ -14,6 +14,16 @@ const CommentSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
+    createdBy: {
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: "Users",
+      required: true,
+    },
+    nickname: {
+      type:String,
+      ref: "Users",
+      required: true,
+    },
   },
   { timestamps: true }
 );
