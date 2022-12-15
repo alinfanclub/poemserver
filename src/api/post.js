@@ -73,7 +73,7 @@ Postrouter.get("/ownpoem", async (req, res) => {
   try {
     res.header("Access-Control-Allow-Origin", "*");
     const docs = await Post.find({
-      type: "자작 시",
+      type: "창작 시",
     })
       .lean()
       .exec();
